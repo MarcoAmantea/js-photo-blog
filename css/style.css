@@ -1,11 +1,18 @@
-header{
+header {
     background-image: url(../img/wall.png);
-    font-family: "Edu TAS Beginner", cursive;
-    font-weight: bold 700;
+    font-family: "Edu SA Beginner", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
-main{
-    font-family: "Sometype Mono", monospace;
+
+main {
+    font-family: "Sometype Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
 }
-body{
+
+body {
     background-image: url(../img/cork.png)
 }

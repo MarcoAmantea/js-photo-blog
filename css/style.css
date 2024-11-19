@@ -5,7 +5,10 @@ header {
     font-weight: 700;
     font-style: normal;
 }
-
+.container{
+    margin: 0 auto;
+    width: 70%;
+}
 main {
     font-family: "Sometype Mono", serif;
     font-optical-sizing: auto;

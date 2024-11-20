@@ -2,6 +2,7 @@
 const rowElem = document.querySelector(".row");
 const overlayElem = document.getElementById("overlay");
 const overlayBtn = document.getElementById("overlay-btn");
+const imgCurElem = document.getElementsByClassName("img-cur")
 
 
 
@@ -28,7 +29,7 @@ function printPhotos(){
         result += `
         <div class="card mt-5 col-lg-4 col-md-6 col-sm-12 position-relative">
                 <img src="./img/pin.svg" class="position-absolute position-absolute top-0 start-50 translate-middle" alt="">
-                <img src="${curPhoto.url}" id="img-principal" class="card-img-top mt-3" alt="${curPhoto.url}">
+                <img src="${curPhoto.url}" class="card-img-top mt-3 img-principal" alt="${curPhoto.url}">
                 <div class="card-body">
                   <p class="card-text">${curPhoto.title}</p>
                 </div>
@@ -36,7 +37,7 @@ function printPhotos(){
         `
     })
     rowElem.innerHTML = result;
-    const images = document.querySelectorAll('#img-principal');
+    const images = document.querySelectorAll('.img-principal');
     images.forEach(curImg => {
         curImg.addEventListener('click', function() {
             if(overlayElem.classList.contains("d-none")){

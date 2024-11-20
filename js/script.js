@@ -1,5 +1,8 @@
 //Prelevo l'elemento row tramite queryselector
 const rowElem = document.querySelector(".row");
+const overlayBtn = document.querySelectorAll("card")
+
+
 
 //creo variabile con array vuoto dove verranno inseriti i dati di tutte le foto
 let photos = [];
@@ -7,6 +10,8 @@ let photos = [];
 
 axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6").then(resp => {
     photos = resp.data;
+    console.log(resp);
+    
     printPhotos();
 })
 
@@ -28,4 +33,8 @@ function printPhotos(){
     })
     rowElem.innerHTML = result;
 }
+
+
+    
+
 

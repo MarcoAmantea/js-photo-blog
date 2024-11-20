@@ -1,10 +1,8 @@
-//Prelevo l'elemento row tramite queryselector
+//Prelevo gli elementi che mi servono tramite queryselector
 const rowElem = document.querySelector(".row");
-const overlayElem = document.getElementById("overlay");
-const overlayBtn = document.getElementById("overlay-btn");
-const imgCurElem = document.getElementsByClassName("img-cur")
-
-
+const overlayBtn = document.querySelector("#overlay-btn");
+const overlayElem = document.querySelector('#overlay');
+const imgModal = document.querySelector('.img-modal');
 
 //creo variabile con array vuoto dove verranno inseriti i dati di tutte le foto
 let photos = [];
@@ -28,7 +26,7 @@ function printPhotos(){
                
         result += `
         <div class="card mt-5 col-lg-4 col-md-6 col-sm-12 position-relative">
-                <img src="./img/pin.svg" class="position-absolute position-absolute top-0 start-50 translate-middle" alt="">
+                <img src="./img/pin.svg" class="position-absolute position-absolute top-0 start-50 translate-middle punta" alt="">
                 <img src="${curPhoto.url}" class="card-img-top mt-3 img-principal" alt="${curPhoto.url}">
                 <div class="card-body">
                   <p class="card-text">${curPhoto.title}</p>
@@ -40,9 +38,11 @@ function printPhotos(){
     const images = document.querySelectorAll('.img-principal');
     images.forEach(curImg => {
         curImg.addEventListener('click', function() {
-            if(overlayElem.classList.contains("d-none")){
-                overlayElem.classList.remove("d-none")
-            };
+            const srcAttribute = curImg.getAttribute("src");
+            imgModal.setAttribute("src", srcAttribute);
+            if (overlayElem.classList.contains("d-none")) {
+                overlayElem.classList.remove("d-none");
+            }
         });
     });
 }

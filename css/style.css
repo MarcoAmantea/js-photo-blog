@@ -48,3 +48,6 @@ body {
 .card:hover .punta{
     display: none;
 }
+#icon{
+ width: 500px;
+}

@@ -26,6 +26,7 @@ function printPhotos(){
                
         result += `
         <div class="card mt-5 col-lg-4 col-md-6 col-sm-12 position-relative">
+        <i class="fa-solid fa-x position-absolute top-0 end-0 icon"></i>
                 <img src="./img/pin.svg" class="position-absolute position-absolute top-0 start-50 translate-middle punta" alt="">
                 <img src="${curPhoto.url}" class="card-img-top mt-3 img-principal" alt="${curPhoto.url}">
                 <div class="card-body">
@@ -45,6 +46,7 @@ function printPhotos(){
             }
         });
     });
+    
 }
 
 

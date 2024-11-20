@@ -43,3 +43,6 @@ body {
     transform: scale(1.1) rotate(20deg);
     cursor: pointer;
 }
+.card:hover .punta{
+    display: none;
+}
